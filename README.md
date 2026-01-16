@@ -158,39 +158,40 @@ public class CollectorZone : MonoBehaviour
     }
 }
 ```
-### F) Attach Script to CollectorBox
+## F) Attach Script to CollectorBox
 
-Select CollectorBox
-Inspector → Add Component
-Add: CollectorZone
+1. Select `CollectorBox`
+2. Inspector → Add Component
+3. Add: `CollectorZone`
 
-Now the box can “collect” objects entering it.
+Now the box can collect objects entering it.
 
-### Testing
+---
 
-Press Play
-Grab a gem using VR controller
-Drop it inside CollectorBox
-Gem should disappear
+## Testing
 
+1. Press Play
+2. Grab a gem using the VR controller
+3. Drop it inside `CollectorBox`
+4. The gem should disappear
 
-### Common Issues + Fixes
+---
 
+## Common Issues and Fixes
 
-#### Gem doesn’t disappear?
+### Gem doesn’t disappear
+Check:
+- Is the gem Tag set to `Collectable`?
+- Is `CollectorBox` collider set to `Is Trigger = true`?
+- Does the gem have a `Rigidbody`?
+- Does the gem have a `Collider` (Sphere Collider)?
+- Is `CollectorZone` script attached to `CollectorBox`?
 
-Check these:
-Is the gem Tag set to Collectable?
-Is CollectorBox collider set to Is Trigger ✅?
-Does the gem have a Rigidbody ✅?
-Does the gem have a Collider ✅ (Sphere Collider)?
-Is CollectorZone script attached to CollectorBox?
-
-#### Can’t grab the gem?
-
-Make sure XR Grab Interactable is added to the gem
-Make sure you have XR Hands/Controllers set correctly from previous labs
-Make sure the gem has a Rigidbody and Collider
+### Can’t grab the gem
+Check:
+- `XR Grab Interactable` is added to the gem
+- XR Hands/Controllers are set correctly from previous labs
+- The gem has a `Rigidbody` and a `Collider`
 
 ## Submission Task (Video)
 
